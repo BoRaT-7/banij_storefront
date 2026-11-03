@@ -44,5 +44,5 @@ Route::middleware(LoadStorefront::class)->group(function (): void {
     Route::get('/robots.txt', [SystemController::class, 'robots'])->name('robots');
 
     // An unknown address is a 404 that still wears the shop's layout.
-    Route::fallback(fn () => abort(404));
+    Route::fallback(fn() => abort(404));
 });
